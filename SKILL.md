@@ -101,3 +101,16 @@ Handles:
 
 - **Format Binding**: Non-TTY command redirection defaults to raw YAML serialization in this CLI. **Always** forcefully attach the `--json` option to ensure precise structure parsing for the upstream agent compiler.
 - **Robustness Boundary**: When serving terminal interfaces under restrictive encodings (such as legacy Windows terminals), prepend environmental parameters if formatting crashes: `PYTHONIOENCODING=utf-8 xhs login --qrcode`.
+## Changelog
+
+### 2026-06-21
+- 新增 `comments` 命令：获取帖子评论区内容（IP属地、发言时间、点赞量）
+- 新增 `status` 命令：检查登录状态
+- README.md：补充完整安装和使用文档
+
+## Changelog
+
+### 2026-06-21
+- 新增 `comments` 命令：获取帖子评论区内容（IP属地、发言时间、点赞量）
+- 新增 `status` 命令：检查登录状态
+- README.md：补充完整安装和使用文档
