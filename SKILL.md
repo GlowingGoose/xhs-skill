@@ -21,6 +21,18 @@ Always strictly enforce this implicit verification pipeline before attempting an
 
 ## Supported Actions
 
+### ⚠️ Mandatory Clarification (必须澄清)
+
+**Whenever the user mentions any Xiaohongshu content crawling/extraction intent, you MUST ask this clarifying question FIRST — do not proceed to any action until the user specifies:**
+
+> **请先确认你要查询的是：**
+> 
+> **A. 博主信息** — 想了解某个博主的主页资料（粉丝数、简介、获赞数等）
+> 
+> **B. 帖子内容** — 想看某篇帖子的正文、评论、或评论区详情
+
+Only after the user selects A or B (or explicitly states which type of content they want), proceed to the appropriate action below. Do NOT skip this step.
+
 ### 1. Get Post Content
 **Trigger:** User passes a Xiaohongshu note link/ID, or asks the agent to read, summarize, rewrite, or analyze specific post insights.
 
@@ -70,6 +82,8 @@ Handles:
 **Trigger:** User searches for hot keywords, trending inspirations, or competitors' top performing copies on a specific topic.
 
 **Command:** `xhs search "<keyword>" --json`
+
+> **Note for Search:** If the user says something like "帮我搜索小红书上关于XX的内容", treat this as a Search action and present results. The user can then ask for details on any result, which triggers the mandatory clarification above.
 
 ## URL Parsing & Navigation Rules
 
